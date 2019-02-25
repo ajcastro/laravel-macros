@@ -1,0 +1,25 @@
+{
+    "name": "ajcastro/laravel-macros",
+    "description": "Reusable laravel macros.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arjon Jason Castro",
+            "email": "ajcastro29@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "AjCastro\\LaravelMacros\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": "AjCastro\\LaravelMacros\\MacrosServiceProvider"
+        }
+    }
+}
