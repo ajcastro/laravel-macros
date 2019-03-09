@@ -17,6 +17,19 @@ $response
     ->assertJson(...);
 ```
 
+### ddO
+
+Similar to `$response->dd()` but it dump the original content instead.
+
+```php
+$response = $this->post(...);
+
+$response
+    ->ddO() // prints the original content of the response.
+    ->assertOk()
+    ->assertJson(...);
+```
+
 
 # Query Builder Macros
 
