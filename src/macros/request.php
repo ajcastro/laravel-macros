@@ -4,7 +4,13 @@ use \Illuminate\Http\Request;
 
 Request::macro('cast', function ($key, $callback) {
     $keys = is_array($key) ? $key : func_get_args();
+
+    $keys = array_filter($keys, function ($key) {
+        return is_scalar($key);
+    });
+
     $result = [];
+
     foreach ($keys as $k) {
         $result[$k] = $callback($this->input($k));
     }
